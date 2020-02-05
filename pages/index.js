@@ -140,4 +140,13 @@ const Home = () => {
   );
 };
 
+
+Home.getInitialProps = async ctx => {
+  console.log('reqesting data...');
+  const res = await fetch('https://api.github.com/repos/zeit/next.js');
+  const json = await res.json();
+  console.log(json);
+  return { stars: json.stargazers_count }
+}
+
 export default Home;
