@@ -142,6 +142,7 @@ const Home = () => {
 
 
 Home.getInitialProps = async ctx => {
+  const fetch = require("fetch");
   console.log('reqesting data...');
   const res = await fetch('https://api.github.com/repos/zeit/next.js');
   const json = await res.json();
