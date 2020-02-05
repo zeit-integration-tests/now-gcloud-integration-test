@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "echo $GCLOUD_CREDENTIALS && next build",
     "start": "next start"
   },
   "dependencies": {
