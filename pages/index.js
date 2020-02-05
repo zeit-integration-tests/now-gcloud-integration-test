@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Head from '../components/head';
 import Nav from '../components/nav';
+import fetch from 'node-fetch'
 
 const Home = () => {
   const [date, setDate] = useState(null);
@@ -142,7 +143,7 @@ const Home = () => {
 
 
 Home.getInitialProps = async ctx => {
-  const fetch = require("fetch");
+  
   console.log('reqesting data...');
   const res = await fetch('https://api.github.com/repos/zeit/next.js');
   const json = await res.json();
