@@ -22,7 +22,7 @@ const Home = () => {
       <Nav />
 
       <div className="hero">
-        <h1 className="title">Welcome to Next!</h1>
+        <h1 className="title">Welcome to Next!!</h1>
         <h6>{process.env.GCLOUD_CREDENTIALS}</h6>
         <p className="description">
           To get started, edit the <code>pages/index.js</code> or{' '}
